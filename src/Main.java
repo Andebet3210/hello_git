@@ -38,7 +38,7 @@ public class Main {
         int result = max(x, y);
         System.out.println("Max is: " + result);
 
-        //9. Class
+    
         Person person = new Person("Andebet");
         person.greet();
 
