@@ -1,17 +1,68 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        int x = 10;
+         int y=15;
+        char letter = 'a';
+        boolean isTrue = true;
+        int sum = x + 5;
+        double avg = (x + y)/2;
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        if(x > y && isTrue) {
+            System.out.println("Condition is true");
+        }
+
+        else if(x > 5) {
+            System.out.println("x is greater than 5");
+        } else {
+            System.out.println("x is less than or equal to 5");
+        }
+
+        switch(letter) {
+            case 'a':
+                System.out.println("Letter is a");
+                break;
+            case 'b':
+                System.out.println("Letter is b");
+                break;
+        }
+
+
+        int count = 0;
+        while(count < 5) {
+            System.out.println(count);
+            count++;
+        }
+
+        int result = max(x, y);
+        System.out.println("Max is: " + result);
+
+        //9. Class
+        Person person = new Person("Andebet");
+        person.greet();
+
+    }
+
+    static int max(int a, int b) {
+        if(a > b) {
+            return a;
+        } else {
+            return b;
         }
     }
+
+    static class Person {
+        String name;
+
+        Person(String name){
+            this.name = name;
+        }
+
+        void greet() {
+            System.out.println("Hello, I am " + name);
+        }
+    }
+
 }
+
